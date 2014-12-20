@@ -1,0 +1,83 @@
+#!/usr/bin/python3
+
+import io
+import argparse
+import json
+import subprocess
+import urllib.request
+import tarfile
+import sys
+
+binlist_url_template = 'http://snapshot.debian.org/mr/binary/{package}/'
+bininfo_url_template = 'http://snapshot.debian.org/mr/package/{source}/{src_version}/binfiles/{package}/{bin_version}'
+download_url_template = 'http://snapshot.debian.org/file/{sha1}'
+
+def uget(url, indent=0):
+    indent = '  ' * indent
+    print(indent + '{url} ... '.format(url=url), end='', file=sys.stderr)
+    sys.stderr.flush()
+    with urllib.request.urlopen(url) as file:
+        ubytes = file.read()
+    print('done', file=sys.stderr)
+    return ubytes
+
+def jget(url):
+    data = uget(url)
+    data = data.decode('UTF-8')
+    return json.loads(data)
+
+def deb_extract_file(deb_bytes, path):
+    path = './' + path.lstrip('/')
+    dpkg = subprocess.Popen(
+        ['dpkg-deb', '--fsys-tarfile', '/dev/stdin'],
+        stdin=subprocess.PIPE, stdout=subprocess.PIPE,
+    )
+    tar_bytes, stderr = dpkg.communicate(deb_bytes)
+    with io.BytesIO(tar_bytes) as tar_io:
+        with tarfile.TarFile(fileobj=tar_io) as tar_file:
+            with tar_file.extractfile(path) as target_file:
+                return target_file.read()
+
+class SecurityAlert(Exception):
+    pass
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument('package', metavar='PACKAGE')
+    ap.add_argument('path', metavar='PATH')
+    options = ap.parse_args()
+    url = binlist_url_template.format(package=options.package)
+    data = jget(url)
+    data = data['result']
+    seen_architectures = set()
+    for pkgdata in data:
+        src_version = pkgdata['version']
+        bin_version = pkgdata['binary_version']
+        source = pkgdata['source']
+        assert pkgdata['name'] == options.package
+        url = bininfo_url_template.format(source=source, src_version=src_version, package=options.package, bin_version=bin_version)
+        data = jget(url)
+        data = data['result']
+        for archdata in data:
+            architecture = archdata['architecture']
+            if ('/' in architecture) or not architecture[0].isalpha():
+                raise SecurityAlert(architecture)
+            local_path = (
+                architecture +
+                '_' +
+                options.path.lstrip('/').replace('/', '_')
+            )
+            sha1 = archdata['hash']
+            if architecture in seen_architectures:
+                continue
+            url = download_url_template.format(sha1=sha1)
+            deb_bytes = uget(url, indent=1)
+            target_bytes = deb_extract_file(deb_bytes, options.path)
+            with open(local_path, 'wb') as file:
+                file.write(target_bytes)
+            seen_architectures.add(architecture)
+
+if __name__ == '__main__':
+    main()
+
+# vim:ts=4 sw=4 et
