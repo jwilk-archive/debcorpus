@@ -1,0 +1,68 @@
+::
+
+   $ debcorpus nyancat /usr/bin/nyancat
+   http://snapshot.debian.org/mr/binary/nyancat/ ... done
+   http://snapshot.debian.org/mr/package/nyancat/1.5.1-1/binfiles/nyancat/1.5.1-1+b1 ... done
+     http://snapshot.debian.org/file/2455bda70590df56a12f995ff939c1b2b27df0da ... done
+   http://snapshot.debian.org/mr/package/nyancat/1.5.1-1/binfiles/nyancat/1.5.1-1 ... done
+     http://snapshot.debian.org/file/8f5164e58c7ab01aa0fcae035c4798eccb57c719 ... done
+     http://snapshot.debian.org/file/1fb3b220148cfd92bf0a0c171f690bb889a876ad ... done
+     http://snapshot.debian.org/file/e395b44d6f24b8a8dc2c8c91e49a9ba0a322659e ... done
+     http://snapshot.debian.org/file/c469494b1d8a736c18de462f518548a08472a79b ... done
+     http://snapshot.debian.org/file/4494b88d11a32a1b4d30f534b5f34391fb1d2e08 ... done
+     http://snapshot.debian.org/file/24e0a56c0ea36b284afaaa8e5ae146a9f3f8223b ... done
+     http://snapshot.debian.org/file/d82823ced01e57ff4192988ca997224dc0c15e99 ... done
+     http://snapshot.debian.org/file/0a8b0098c202fc754e19d5cc40883af38546d848 ... done
+     http://snapshot.debian.org/file/c85a0a9052c9828462bbd47739fa57a358ffa8c6 ... done
+     http://snapshot.debian.org/file/a85cb72eac2a5df3eb335533cd7a19370410a8c3 ... done
+     http://snapshot.debian.org/file/8e50fdd0d0072c613a17bc51e85d2486cc477a63 ... done
+     http://snapshot.debian.org/file/d502cce3e23740f81059b3b224c40b07e84d9e0e ... done
+     http://snapshot.debian.org/file/5a3e2b8e62c56478489ba2112e00465a8ab339c7 ... done
+     http://snapshot.debian.org/file/1fb934006c4875fbbc6653517af9719bcf379200 ... done
+     http://snapshot.debian.org/file/f2f361b3a7b04c134d400f1791ccd348158a398b ... done
+     http://snapshot.debian.org/file/0e84eddb1231cb81bdb73dd44af3ec0609eb624f ... done
+     http://snapshot.debian.org/file/30fe41532843512213801679f753aa913670b95f ... done
+     http://snapshot.debian.org/file/b59c82408de959b00e107e0786dd66d57a00758f ... done
+     http://snapshot.debian.org/file/f7cba45e4b86d3e7cf98a87b21c6611a99b1123b ... done
+     http://snapshot.debian.org/file/de0064401ba65bb5fabefa25ccd59c8940de3aba ... done
+     http://snapshot.debian.org/file/25cea50b9cc209be8c4b1fb9527372077bf19f7b ... done
+   http://snapshot.debian.org/mr/package/nyancat/1.4.4-1/binfiles/nyancat/1.4.4-1+b1 ... done
+   http://snapshot.debian.org/mr/package/nyancat/1.4.4-1/binfiles/nyancat/1.4.4-1 ... done
+     http://snapshot.debian.org/file/e52fb0b15b1ef257cc3dc29016391907013aac50 ... done
+   http://snapshot.debian.org/mr/package/nyancat/1.2.2-1/binfiles/nyancat/1.2.2-1 ... done
+     http://snapshot.debian.org/file/f43bb60f4508c492ea9910893835d9c65fb15da9 ... done
+   http://snapshot.debian.org/mr/package/nyancat/1.2.1-1/binfiles/nyancat/1.2.1-1 ... done
+     http://snapshot.debian.org/file/c688edd66488941c6ee90d7bc9dc9ae8e2402147 ... done
+   http://snapshot.debian.org/mr/package/nyancat/1.1+git20130307.43097eb-1/binfiles/nyancat/1.1+git20130307.43097eb-1+b1 ... done
+   http://snapshot.debian.org/mr/package/nyancat/1.1+git20130307.43097eb-1/binfiles/nyancat/1.1+git20130307.43097eb-1 ... done
+   http://snapshot.debian.org/mr/package/nyancat/1.0+git20120523.99dc310-1/binfiles/nyancat/1.0+git20120523.99dc310-1 ... done
+   http://snapshot.debian.org/mr/package/nyancat/0.1+git20120401.5a88b86-1/binfiles/nyancat/0.1+git20120401.5a88b86-1 ... done
+
+   $ file *
+   alpha_usr_bin_nyancat:          ELF 64-bit LSB shared object, Alpha (unofficial), version 1 (SYSV), dynamically linked, interpreter /lib/ld-linux.so.2, for GNU/Linux 3.2.0, BuildID[sha1]=14ba73faf632a7014eae372c2782b42ef87e6167, stripped
+   amd64_usr_bin_nyancat:          ELF 64-bit LSB shared object, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, for GNU/Linux 2.6.32, BuildID[sha1]=fded5b8554bac896c60701d609331cf8ecff0beb, stripped
+   arm64_usr_bin_nyancat:          ELF 64-bit LSB shared object, ARM aarch64, version 1 (SYSV), dynamically linked, interpreter /lib/ld-linux-aarch64.so.1, for GNU/Linux 3.7.0, BuildID[sha1]=296f89406ff9bb9d26852b91730a692e917ea4f3, stripped
+   armel_usr_bin_nyancat:          ELF 32-bit LSB shared object, ARM, EABI5 version 1 (SYSV), dynamically linked, interpreter /lib/ld-linux.so.3, for GNU/Linux 3.2.0, BuildID[sha1]=3c476b17265a6f6b6b0b1b171a9936ef0eed080d, stripped
+   armhf_usr_bin_nyancat:          ELF 32-bit LSB shared object, ARM, EABI5 version 1 (SYSV), dynamically linked, interpreter /lib/ld-linux-armhf.so.3, for GNU/Linux 3.2.0, BuildID[sha1]=de39ef778c9dd3f853813d3ec9835984abf6db37, stripped
+   hppa_usr_bin_nyancat:           ELF 32-bit MSB executable, PA-RISC, *unknown arch 0xf* version 1 (GNU/Linux), dynamically linked, interpreter /lib/ld.so.1, for GNU/Linux 3.2.0, BuildID[sha1]=8603b0eca0e4b62acc363007881278ee29478b82, stripped
+   hurd-i386_usr_bin_nyancat:      ELF 32-bit LSB shared object, Intel 80386, version 1 (SYSV), dynamically linked, interpreter /lib/ld.so, for GNU/Hurd 0.0.0, BuildID[sha1]=6dad7859bfc8d5aaba490fc9406841367c842729, stripped
+   i386_usr_bin_nyancat:           ELF 32-bit LSB shared object, Intel 80386, version 1 (SYSV), dynamically linked, interpreter /lib/ld-linux.so.2, for GNU/Linux 2.6.32, BuildID[sha1]=8ab48260561301c8f60a0da046f701bddc82eb14, stripped
+   ia64_usr_bin_nyancat:           ELF 64-bit LSB executable, IA-64, version 1 (SYSV), dynamically linked, interpreter /lib/ld-linux-ia64.so.2, for GNU/Linux 2.6.32, BuildID[sha1]=ed536f6c1f84820e53e1d1aa1cd5ad498df31c93, stripped
+   kfreebsd-amd64_usr_bin_nyancat: ELF 64-bit LSB executable, x86-64, version 1 (FreeBSD), dynamically linked, interpreter /lib/ld-kfreebsd-x86-64.so.1, for GNU/kFreeBSD 8.3.0, BuildID[sha1]=d18a228ffc22e5203169561b020ea595d233ba52, stripped
+   kfreebsd-i386_usr_bin_nyancat:  ELF 32-bit LSB executable, Intel 80386, version 1 (FreeBSD), dynamically linked, interpreter /lib/ld.so.1, for GNU/kFreeBSD 8.3.0, BuildID[sha1]=9cc27435b5cd6172fe4275fa1a18f6a9cef9d7b8, stripped
+   m68k_usr_bin_nyancat:           ELF 32-bit MSB shared object, Motorola m68k, 68020, version 1 (SYSV), dynamically linked, interpreter /lib/ld.so.1, for GNU/Linux 3.2.0, BuildID[sha1]=03f2815085cf7b0c5050a9f1e7a917362d9ee02a, stripped
+   mips64el_usr_bin_nyancat:       ELF 64-bit LSB shared object, MIPS, MIPS64 rel2 version 1 (SYSV), dynamically linked, interpreter /lib64/ld.so.1, BuildID[sha1]=68efcc6a6f1c598fefb3e547faa6963a42aeafa1, for GNU/Linux 3.2.0, stripped
+   mips_usr_bin_nyancat:           ELF 32-bit MSB shared object, MIPS, MIPS32 rel2 version 1 (SYSV), dynamically linked, interpreter /lib/ld.so.1, for GNU/Linux 3.2.0, BuildID[sha1]=ed01911327683d2b5446f8b8d60abc1ef841c0cb, stripped
+   mipsel_usr_bin_nyancat:         ELF 32-bit LSB shared object, MIPS, MIPS-II version 1 (SYSV), dynamically linked, interpreter /lib/ld.so.1, for GNU/Linux 3.2.0, BuildID[sha1]=48890aff3770d6a4172e9f07412894278e748d13, stripped
+   powerpc_usr_bin_nyancat:        ELF 32-bit MSB shared object, PowerPC or cisco 4500, version 1 (SYSV), dynamically linked, interpreter /lib/ld.so.1, for GNU/Linux 3.2.0, BuildID[sha1]=a056a2aee9a41f4732188656a766114aa143a388, stripped
+   powerpcspe_usr_bin_nyancat:     ELF 32-bit MSB shared object, PowerPC or cisco 4500, version 1 (SYSV), dynamically linked, interpreter /lib/ld.so.1, for GNU/Linux 3.2.0, BuildID[sha1]=fc0b1795a6c7807aa81feaceb3fde7eb788c8639, stripped
+   ppc64_usr_bin_nyancat:          ELF 64-bit MSB shared object, 64-bit PowerPC or cisco 7500, version 1 (SYSV), dynamically linked, interpreter /lib64/ld64.so.1, for GNU/Linux 3.2.0, BuildID[sha1]=c379f04ae99c4db1e297e8561e65ca9639d51a98, stripped
+   ppc64el_usr_bin_nyancat:        ELF 64-bit LSB shared object, 64-bit PowerPC or cisco 7500, version 1 (SYSV), dynamically linked, interpreter /lib64/ld64.so.2, for GNU/Linux 3.2.0, BuildID[sha1]=ec9164201888eade44f7d9e63d013dce35a3ccd4, stripped
+   s390_usr_bin_nyancat:           ELF 32-bit MSB executable, IBM S/390, version 1 (SYSV), dynamically linked, interpreter /lib/ld.so.1, for GNU/Linux 2.6.32, BuildID[sha1]=f022601cc2b10c97fb7436622479916e3cedf1f0, stripped
+   s390x_usr_bin_nyancat:          ELF 64-bit MSB shared object, IBM S/390, version 1 (SYSV), dynamically linked, interpreter /lib/ld64.so.1, for GNU/Linux 3.2.0, BuildID[sha1]=3df97b7d621c376506350fcf6c9feb2a27aadfc0, stripped
+   sh4_usr_bin_nyancat:            ELF 32-bit LSB shared object, Renesas SH, version 1 (SYSV), dynamically linked, interpreter /lib/ld-linux.so.2, BuildID[sha1]=34e772dd8556a2aadbebb058097bd69a2d13fae2, for GNU/Linux 3.2.0, stripped
+   sparc64_usr_bin_nyancat:        ELF 64-bit MSB shared object, SPARC V9, relaxed memory ordering, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux.so.2, for GNU/Linux 3.2.0, BuildID[sha1]=aa233b7dedae134eac1f853c28f99edec2529f4b, stripped
+   sparc_usr_bin_nyancat:          ELF 32-bit MSB executable, SPARC32PLUS, V8+ Required, total store ordering, version 1 (SYSV), dynamically linked, interpreter /lib/ld-linux.so.2, for GNU/Linux 2.6.32, BuildID[sha1]=1c5d3240f32ba87452b06c70ad440f7ae273fb81, stripped
+   x32_usr_bin_nyancat:            ELF 32-bit LSB shared object, x86-64, version 1 (SYSV), dynamically linked, interpreter /libx32/ld-linux-x32.so.2, for GNU/Linux 3.4.0, BuildID[sha1]=36e4b4372eaf7fad54d52225454e95d2f63be819, stripped
+
+.. vim:ts=3 sts=3 sw=3 et
