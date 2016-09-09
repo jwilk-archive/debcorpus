@@ -36,7 +36,7 @@ def uget(url, indent=0):
     indent = '  ' * indent
     print(indent + '{url} ... '.format(url=url), end='', file=sys.stderr)
     sys.stderr.flush()
-    with urllib.request.urlopen(url) as file:
+    with urllib.request.urlopen(url, cadefault=True) as file:
         ubytes = file.read()
     print('done', file=sys.stderr)
     return ubytes
