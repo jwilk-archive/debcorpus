@@ -1,4 +1,4 @@
-::
+.. code:: console
 
    $ debcorpus nyancat /usr/bin/nyancat
    http://snapshot.debian.org/mr/binary/nyancat/ ... done
